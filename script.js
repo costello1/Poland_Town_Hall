@@ -49,8 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const selectedCommunication = document.querySelector('input[name="communication"]:checked');
         const likeMost = document.querySelector('textarea[name="likeMost"]').value;
         const suggestion = document.querySelector('textarea[name="suggestion"]').value;
-        const likedMostPolish = document.querySelector('textarea[name="likedMostPolish"]').value;
-        const suggestionPolish = document.querySelector('textarea[name="suggestionPolish"]').value;
         userId = getCookie('userId'); // Ricarica il cookie per assicurarsi che sia aggiornato
 
         const hasSubmitted = await checkUserSubmission();
