@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Controlla se l'utente ha già risposto
     const checkUserSubmission = async () => {
-        const response = await fetch(`https://your-project-id.cloudfunctions.net/api/user/${userId}`);
+        const response = await fetch(`https://adminapi-7524dbiyoq-uc.a.run.app/user/${userId}`);
         const data = await response.json();
         return data.hasSubmitted;
     };
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 };
 
                 // Salva la risposta nel backend
-                await fetch(`https://your-project-id.cloudfunctions.net/api/answers`, {
+                await fetch(`https://adminapi-7524dbiyoq-uc.a.run.app/answers`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 // Aggiorna lo stato dell'utente nel backend
-                await fetch(`https://your-project-id.cloudfunctions.net/api/user/${userId}`, {
+                await fetch(`https://adminapi-7524dbiyoq-uc.a.run.app/user/${userId}`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

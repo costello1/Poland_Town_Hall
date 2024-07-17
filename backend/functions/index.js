@@ -10,7 +10,8 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 
-app.use(cors({origin: true}));
+// Configura il middleware CORS per consentire tutte le origini
+app.use(cors());
 app.use(express.json());
 
 const users = {};
@@ -30,12 +31,7 @@ const columns = [
 // Initialize Excel file
 const initializeExcelFile = () => {
   const workbook = XLSX.utils.book_new();
-  const worksheet = XLSX.utils.json_to_sheet([{
-    "Question 1": "",
-    "Question 2": "",
-    "Question 3": "",
-    "Question 4": "",
-  }], {skipHeader: true});
+  const worksheet = XLSX.utils.json_to_sheet([], {skipHeader: true});
   XLSX.utils.sheet_add_aoa(worksheet, [columns], {origin: "A1"});
   XLSX.utils.book_append_sheet(workbook, worksheet, "Answers");
   XLSX.writeFile(workbook, answersFilePath);
@@ -115,4 +111,5 @@ app.post("/clear-excel", (req, res) => {
 });
 
 // Export the express app as a Firebase Function
+exports.api = onRequest(app);
 exports.adminApi = onRequest(app);
