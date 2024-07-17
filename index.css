@@ -1,0 +1,110 @@
+/* Reset margins and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body style */
+body, html {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #1C2B39;
+}
+
+/* Main container */
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+#quizForm{
+        height: 70vh;
+        position: relative;
+        overflow: hidden;
+        overflow-y: scroll;
+}
+
+/* Question title */
+h1.question-title {
+    font-size: 2.5em;
+    margin-bottom: 2px;
+    color: #e60000; /* Red */
+    margin-bottom: 20px;
+}
+h1.question {
+    display: flex;
+    font-size: 1.60em;
+    margin-bottom: 10px;
+    color: #1C2B39; /* Red */
+    margin-top: 20px;
+}
+h1.question-1 {
+    display: flex;
+    font-size: 1.60em;
+    margin-bottom: 10px;
+    color: #1C2B39; /* Red */
+    margin-top: 20px;
+}
+
+/* Answer labels */
+label {
+    display: flex;
+    margin: 10px 0px;
+    font-size: 1.1em;
+    
+}
+input{
+    margin-right: 5px;
+}
+
+/* Small text style */
+small {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Submit button style */
+button[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e60000; /* Red */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #cc0000; /* Dark red */
+}
+
+/* Textarea style */
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+/* Powered by text */
+.powered-by {
+    color: #e60000; /* Rosso */
+    font-size: 0.8em;
+    text-align: center;
+    margin-top: 20px;
+}

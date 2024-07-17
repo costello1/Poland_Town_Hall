@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire</title>
+    <link rel="stylesheet" href="index.css">
+    <script>
+        // Check if the user has already visited the welcome page
+        if (!localStorage.getItem('visitedWelcomePage')) {
+            window.location.href = 'welcome.html';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <form id="quizForm">
+
+            <h1 class="question-title">eNEXT WAVE III - Kick Off Day Survey</h1>
+            <hr>
+            <h1 class="question-1">Which is your feedback on the Event Content?</h1>
+            <label><input type="radio" name="answer1" value="6"> 6 / Totally Positive</label><br>
+            <label><input type="radio" name="answer1" value="5"> 5 / Positive</label><br>
+            <label><input type="radio" name="answer1" value="4"> 4 / Mostly Positive</label><br>
+            <label><input type="radio" name="answer1" value="3"> 3 / Mostly Negative</label><br>
+            <label><input type="radio" name="answer1" value="2"> 2 / Negative</label><br>
+            <label><input type="radio" name="answer1" value="1"> 1 / Totally negative</label><br>
+            
+            <h1 class="question-1">Which is your feedback on the Event Format?</h1>
+            <label><input type="radio" name="answer2" value="6"> 6 / Totally Positive</label><br>
+            <label><input type="radio" name="answer2" value="5"> 5 / Positive</label><br>
+            <label><input type="radio" name="answer2" value="4"> 4 / Mostly Positive</label><br>
+            <label><input type="radio" name="answer2" value="3"> 3 / Mostly Negative</label><br>
+            <label><input type="radio" name="answer2" value="2"> 2 / Negative</label><br>
+            <label><input type="radio" name="answer2" value="1"> 1 / Totally Negative</label><br>
+
+            <h1 class="question">Weak points of the event and suggestions for improvement:</h1>
+            <textarea name="answer3" maxlength="1000" rows="4" cols="50"></textarea><br>
+
+            <h1 class="question">Strong points of the event:</h1>
+            <textarea name="answer4" maxlength="1000" rows="4" cols="50"></textarea><br>
+
+            <button type="submit">Submit</button>
+        </form>
+        <div class="powered-by">Powered by T&I - AI Department</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

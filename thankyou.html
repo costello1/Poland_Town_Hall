@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grazie</title>
+    <link rel="stylesheet" href="thankyou.css">
+    <script>
+        // Funzione per impedire il ritorno indietro
+        function preventBack() {
+            // Sovrascrive l'ultima voce della cronologia
+            history.replaceState(null, '', location.href);
+            // Aggiunge una nuova voce alla cronologia
+            history.pushState(null, '', location.href);
+            window.onpopstate = function () {
+                // Rimani sulla stessa pagina se l'utente prova a tornare indietro
+                history.pushState(null, '', location.href);
+            };
+        }
+
+        // Impedisci il ritorno indietro quando la pagina viene caricata
+        document.addEventListener('DOMContentLoaded', preventBack);
+
+        // Rinnova il blocco del tasto indietro quando l'utente naviga avanti
+        setInterval(preventBack, 100);
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Thank you for answering the questionnaire!</h1>
+        <!--<a href="results.html">Visualizza i risultati</a>-->
+        <div class="powered-by">Powered by T&I - AI Department</div>
+    </div>
+</body>
+</html>

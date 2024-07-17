@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="welcome.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Imposta un flag per indicare che l'utente ha visitato la pagina di benvenuto
+            localStorage.setItem('visitedWelcomePage', 'true');
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <img src="LOGO LEONARDO.png" alt="Welcome Image" class="welcome-image">
+        <button id="startButton">Start</button>
+        <div class="powered-by">Powered by T&I - AI Department</div>
+    </div>
+    <script>
+        document.getElementById('startButton').addEventListener('click', () => {
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

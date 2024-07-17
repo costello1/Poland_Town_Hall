@@ -1,0 +1,36 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1C2B39;
+    font-family: Arial, sans-serif;
+}
+.container{
+    height: 96vh;
+    text-align: center;
+    justify-content: center;
+    margin-top: 2vh;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    overflow-y: scroll;
+}
+h1{
+    color: #ffffff ;
+}
+p{
+    color: #ffffff;
+    font-size: 20px;
+}
+/* Powered by text */
+.powered-by {
+    color: #ffffff; /* Rosso */
+    font-size: 0.8em;
+    text-align: center;
+    margin-top: 20px;
+}
