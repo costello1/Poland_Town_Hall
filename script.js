@@ -61,8 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     communication: selectedCommunication ? selectedCommunication.value : "",
                     likeMost: likeMost || "", // Se vuoto, salva una stringa vuota
                     suggestion: suggestion || "", // Se vuoto, salva una stringa vuota
-                    likedMostPolish: likedMostPolish || "", // Se vuoto, salva una stringa vuota
-                    suggestionPolish: suggestionPolish || "" // Se vuoto, salva una stringa vuota
                 };
 
                 // Salva la risposta nel backend
