@@ -57,11 +57,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (hasSubmitted) {
             window.location.href = "thankyou.html";
         } else {
-            if (selectedContent && selectedSetup && selectedCommunication) {
                 const answers = {
-                    content: selectedContent.value,
-                    setup: selectedSetup.value,
-                    communication: selectedCommunication.value,
+                    content: selectedContent ? selectedContent.value : "",
+                    setup: selectedSetup ? selectedSetup.value : "",
+                    communication: selectedCommunication ? selectedCommunication.value : "",
                     likeMost: likeMost || "", // Se vuoto, salva una stringa vuota
                     suggestion: suggestion || "", // Se vuoto, salva una stringa vuota
                     likedMostPolish: likedMostPolish || "", // Se vuoto, salva una stringa vuota
@@ -87,9 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 window.location.href = "thankyou.html";
-            } else {
-                alert("Please answer all required questions before submitting.");
-            }
+           
         }
     });
 });
