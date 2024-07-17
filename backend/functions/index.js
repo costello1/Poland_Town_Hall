@@ -17,7 +17,15 @@ const users = {};
 const answersFilePath = path.join(__dirname, "answers.xlsx");
 
 // Questions titles
-const columns = ["Question 1", "Question 2", "Question 3", "Question 4"];
+const columns = [
+  "Event Content",
+  "Event Setup",
+  "Communication effectiveness",
+  "What did you like the most of the event?",
+  "Any suggestion for improvement?",
+  "Co najbardziej Ci się podobało podczas spotkania?",
+  "Jakie są Twoje propozycje do usprawnienia spotkania w przyszłości?",
+];
 
 // Initialize Excel file
 const initializeExcelFile = () => {
